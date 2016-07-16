@@ -59,6 +59,7 @@
 - (void)yd_layoutNavigation {
     
     self.title = @"圈子列表";
+    [self ls_setBackBtn];
 }
 
 #pragma mark - layzLoad

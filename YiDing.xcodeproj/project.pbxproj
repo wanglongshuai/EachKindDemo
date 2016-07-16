@@ -18,9 +18,16 @@
 		DC633EF61C9FF03900DF00F2 /* YDTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC633EF51C9FF03900DF00F2 /* YDTableViewHeaderFooterView.m */; };
 		DC633EF91C9FF05B00DF00F2 /* YDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC633EF81C9FF05B00DF00F2 /* YDNavigationController.m */; };
 		DC633EFC1C9FF08800DF00F2 /* YDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC633EFB1C9FF08800DF00F2 /* YDCollectionViewCell.m */; };
+		DC7102861D378BCF0028E7DA /* LSAttributedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7102851D378BCF0028E7DA /* LSAttributedViewController.m */; };
+		DC71028B1D378D800028E7DA /* LSAttributedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC71028A1D378D800028E7DA /* LSAttributedViewModel.m */; };
+		DC71028E1D378DC00028E7DA /* LSAttributeMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC71028D1D378DC00028E7DA /* LSAttributeMainView.m */; };
 		DCABBFEC1CA02A7E004D1AD9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCABBFEB1CA02A7E004D1AD9 /* AppDelegate.m */; };
 		DCABBFEF1CA02AA0004D1AD9 /* YDStartAPP.m in Sources */ = {isa = PBXBuildFile; fileRef = DCABBFEE1CA02AA0004D1AD9 /* YDStartAPP.m */; };
 		DCABBFF21CA02AC0004D1AD9 /* YDThirdPartService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCABBFF11CA02AC0004D1AD9 /* YDThirdPartService.m */; };
+		DCCE73EC1D372D44009AC0EB /* homePage.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCCE73EB1D372D44009AC0EB /* homePage.plist */; };
+		DCCE73F21D37385B009AC0EB /* UIViewController+LSCore.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCE73F11D37385B009AC0EB /* UIViewController+LSCore.m */; };
+		DCCE73FA1D373F6C009AC0EB /* LSGuideClickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCE73F91D373F6C009AC0EB /* LSGuideClickViewController.m */; };
+		DCCE73FC1D373FA2009AC0EB /* Animation.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCCE73FB1D373FA2009AC0EB /* Animation.xcassets */; };
 		DCD501031CB7436000BFC00C /* LSCircleListCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD500EE1CB7436000BFC00C /* LSCircleListCollectionCell.m */; };
 		DCD501041CB7436000BFC00C /* LSCircleListHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD500F01CB7436000BFC00C /* LSCircleListHeaderView.m */; };
 		DCD501051CB7436000BFC00C /* LSCircleListSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD500F21CB7436000BFC00C /* LSCircleListSectionHeaderView.m */; };
@@ -78,12 +85,24 @@
 		DC633F001C9FF19700DF00F2 /* YDTableVIewCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTableVIewCellProtocol.h; sourceTree = "<group>"; };
 		DC633F011C9FF1ED00DF00F2 /* YDTableViewHeaderFooterViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTableViewHeaderFooterViewProtocol.h; sourceTree = "<group>"; };
 		DC633F031C9FF23A00DF00F2 /* YDCollerctionViewCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDCollerctionViewCellProtocol.h; sourceTree = "<group>"; };
+		DC7102841D378BCF0028E7DA /* LSAttributedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAttributedViewController.h; sourceTree = "<group>"; };
+		DC7102851D378BCF0028E7DA /* LSAttributedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAttributedViewController.m; sourceTree = "<group>"; };
+		DC7102891D378D800028E7DA /* LSAttributedViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAttributedViewModel.h; sourceTree = "<group>"; };
+		DC71028A1D378D800028E7DA /* LSAttributedViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAttributedViewModel.m; sourceTree = "<group>"; };
+		DC71028C1D378DC00028E7DA /* LSAttributeMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAttributeMainView.h; sourceTree = "<group>"; };
+		DC71028D1D378DC00028E7DA /* LSAttributeMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAttributeMainView.m; sourceTree = "<group>"; };
 		DCABBFEA1CA02A7E004D1AD9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DCABBFEB1CA02A7E004D1AD9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DCABBFED1CA02AA0004D1AD9 /* YDStartAPP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDStartAPP.h; sourceTree = "<group>"; };
 		DCABBFEE1CA02AA0004D1AD9 /* YDStartAPP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDStartAPP.m; sourceTree = "<group>"; };
 		DCABBFF01CA02AC0004D1AD9 /* YDThirdPartService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDThirdPartService.h; sourceTree = "<group>"; };
 		DCABBFF11CA02AC0004D1AD9 /* YDThirdPartService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDThirdPartService.m; sourceTree = "<group>"; };
+		DCCE73EB1D372D44009AC0EB /* homePage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = homePage.plist; sourceTree = "<group>"; };
+		DCCE73F01D37385B009AC0EB /* UIViewController+LSCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LSCore.h"; sourceTree = "<group>"; };
+		DCCE73F11D37385B009AC0EB /* UIViewController+LSCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LSCore.m"; sourceTree = "<group>"; };
+		DCCE73F81D373F6C009AC0EB /* LSGuideClickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSGuideClickViewController.h; sourceTree = "<group>"; };
+		DCCE73F91D373F6C009AC0EB /* LSGuideClickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSGuideClickViewController.m; sourceTree = "<group>"; };
+		DCCE73FB1D373FA2009AC0EB /* Animation.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Animation.xcassets; sourceTree = "<group>"; };
 		DCD500ED1CB7436000BFC00C /* LSCircleListCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCircleListCollectionCell.h; sourceTree = "<group>"; };
 		DCD500EE1CB7436000BFC00C /* LSCircleListCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCircleListCollectionCell.m; sourceTree = "<group>"; };
 		DCD500EF1CB7436000BFC00C /* LSCircleListHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCircleListHeaderView.h; sourceTree = "<group>"; };
@@ -164,7 +183,6 @@
 			children = (
 				DCABBFE91CA02A7E004D1AD9 /* APPDelegate */,
 				DC633DB51C9FEDAA00DF00F2 /* Class */,
-				DC633E6A1C9FEDAA00DF00F2 /* Resource */,
 				DC633DAE1C9FEBEA00DF00F2 /* Info.plist */,
 				DCD501101CB74EC000BFC00C /* Assets.xcassets */,
 				DC633D9D1C9FEBEA00DF00F2 /* Supporting Files */,
@@ -192,6 +210,7 @@
 		DC633DB51C9FEDAA00DF00F2 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				DCCE73E91D372CCB009AC0EB /* Resource */,
 				DC633DB61C9FEDAA00DF00F2 /* General */,
 				DC633DFC1C9FEDAA00DF00F2 /* Helpers */,
 				DC633E151C9FEDAA00DF00F2 /* Macro */,
@@ -244,6 +263,8 @@
 		DC633DD31C9FEDAA00DF00F2 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				DCCE73F01D37385B009AC0EB /* UIViewController+LSCore.h */,
+				DCCE73F11D37385B009AC0EB /* UIViewController+LSCore.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -312,6 +333,8 @@
 		DC633E201C9FEDAA00DF00F2 /* LSSection */ = {
 			isa = PBXGroup;
 			children = (
+				DC7102821D378B700028E7DA /* NSMutableAttributedString */,
+				DCCE73F31D373F39009AC0EB /* Animation */,
 				DCD039801D36624B00C12AD3 /* HomePage */,
 				DCD500EA1CB7436000BFC00C /* CircleList */,
 			);
@@ -325,43 +348,41 @@
 			path = Vendors;
 			sourceTree = "<group>";
 		};
-		DC633E6A1C9FEDAA00DF00F2 /* Resource */ = {
+		DC7102821D378B700028E7DA /* NSMutableAttributedString */ = {
 			isa = PBXGroup;
 			children = (
-				DC633E6B1C9FEDAA00DF00F2 /* Fonts */,
-				DC633E6C1C9FEDAA00DF00F2 /* Images */,
-				DC633E861C9FEDAA00DF00F2 /* Sound */,
-				DC633E871C9FEDAA00DF00F2 /* Videos */,
+				DC7102881D378D1C0028E7DA /* View */,
+				DC7102871D378D170028E7DA /* ViewModel */,
+				DC7102831D378B700028E7DA /* ViewController */,
 			);
-			path = Resource;
+			path = NSMutableAttributedString;
 			sourceTree = "<group>";
 		};
-		DC633E6B1C9FEDAA00DF00F2 /* Fonts */ = {
+		DC7102831D378B700028E7DA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DC7102841D378BCF0028E7DA /* LSAttributedViewController.h */,
+				DC7102851D378BCF0028E7DA /* LSAttributedViewController.m */,
 			);
-			path = Fonts;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
-		DC633E6C1C9FEDAA00DF00F2 /* Images */ = {
+		DC7102871D378D170028E7DA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DC7102891D378D800028E7DA /* LSAttributedViewModel.h */,
+				DC71028A1D378D800028E7DA /* LSAttributedViewModel.m */,
 			);
-			path = Images;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		DC633E861C9FEDAA00DF00F2 /* Sound */ = {
+		DC7102881D378D1C0028E7DA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DC71028C1D378DC00028E7DA /* LSAttributeMainView.h */,
+				DC71028D1D378DC00028E7DA /* LSAttributeMainView.m */,
 			);
-			path = Sound;
-			sourceTree = "<group>";
-		};
-		DC633E871C9FEDAA00DF00F2 /* Videos */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Videos;
+			path = View;
 			sourceTree = "<group>";
 		};
 		DCABBFE91CA02A7E004D1AD9 /* APPDelegate */ = {
@@ -375,6 +396,64 @@
 				DCABBFF11CA02AC0004D1AD9 /* YDThirdPartService.m */,
 			);
 			path = APPDelegate;
+			sourceTree = "<group>";
+		};
+		DCCE73E91D372CCB009AC0EB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DCCE73EA1D372D11009AC0EB /* Plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		DCCE73EA1D372D11009AC0EB /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				DCCE73EB1D372D44009AC0EB /* homePage.plist */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		DCCE73F31D373F39009AC0EB /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				DCCE73F41D373F39009AC0EB /* Guide */,
+				DCCE73FB1D373FA2009AC0EB /* Animation.xcassets */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		DCCE73F41D373F39009AC0EB /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				DCCE73F51D373F39009AC0EB /* View */,
+				DCCE73F61D373F39009AC0EB /* ViewController */,
+				DCCE73F71D373F39009AC0EB /* ViewModel */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		DCCE73F51D373F39009AC0EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DCCE73F61D373F39009AC0EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DCCE73F81D373F6C009AC0EB /* LSGuideClickViewController.h */,
+				DCCE73F91D373F6C009AC0EB /* LSGuideClickViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DCCE73F71D373F39009AC0EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DCD039801D36624B00C12AD3 /* HomePage */ = {
@@ -554,6 +633,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCCE73EC1D372D44009AC0EB /* homePage.plist in Resources */,
+				DCCE73FC1D373FA2009AC0EB /* Animation.xcassets in Resources */,
 				DCD501111CB74EC000BFC00C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -616,6 +697,7 @@
 				DCF0B7451D36671C009AD1DF /* LSHomePageCell.m in Sources */,
 				DCF0B7421D366567009AD1DF /* LSHomePageMainView.m in Sources */,
 				DCD501041CB7436000BFC00C /* LSCircleListHeaderView.m in Sources */,
+				DC71028E1D378DC00028E7DA /* LSAttributeMainView.m in Sources */,
 				DCF0B7361D366370009AD1DF /* LSHomePageViewController.m in Sources */,
 				DCF0B73F1D36640C009AD1DF /* LSHomePageViewModel.m in Sources */,
 				DCD5010B1CB7436000BFC00C /* LSCircleListSectionHeaderViewModel.m in Sources */,
@@ -625,17 +707,21 @@
 				DCD5010C1CB7436000BFC00C /* LSCircleListViewModel.m in Sources */,
 				DC633EF31C9FF01400DF00F2 /* YDTableViewCell.m in Sources */,
 				DCD501091CB7436000BFC00C /* LSCircleListCollectionCellViewModel.m in Sources */,
+				DCCE73F21D37385B009AC0EB /* UIViewController+LSCore.m in Sources */,
 				DCABBFEC1CA02A7E004D1AD9 /* AppDelegate.m in Sources */,
 				DCD501071CB7436000BFC00C /* LSCircleListView.m in Sources */,
+				DCCE73FA1D373F6C009AC0EB /* LSGuideClickViewController.m in Sources */,
 				DCD5010F1CB749C300BFC00C /* LSCoreToolCenter.m in Sources */,
 				DC633EF61C9FF03900DF00F2 /* YDTableViewHeaderFooterView.m in Sources */,
 				DCD501061CB7436000BFC00C /* LSCircleListTableCell.m in Sources */,
 				DCD5010A1CB7436000BFC00C /* LSCircleListHeaderViewModel.m in Sources */,
 				DC633EF91C9FF05B00DF00F2 /* YDNavigationController.m in Sources */,
+				DC71028B1D378D800028E7DA /* LSAttributedViewModel.m in Sources */,
 				DCD501051CB7436000BFC00C /* LSCircleListSectionHeaderView.m in Sources */,
 				DC633EA31C9FEDAA00DF00F2 /* CMRequest.m in Sources */,
 				DC633EFC1C9FF08800DF00F2 /* YDCollectionViewCell.m in Sources */,
 				DCD501081CB7436000BFC00C /* LSCircleListViewController.m in Sources */,
+				DC7102861D378BCF0028E7DA /* LSAttributedViewController.m in Sources */,
 				DCD501031CB7436000BFC00C /* LSCircleListCollectionCell.m in Sources */,
 				DCABBFF21CA02AC0004D1AD9 /* YDThirdPartService.m in Sources */,
 				DCF0B7481D366867009AD1DF /* LSHomePageCellViewModel.m in Sources */,

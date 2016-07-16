@@ -76,6 +76,7 @@
         @strongify(self);
         
         [self.mainTableView reloadData];
+        self.mainTableView.hidden = NO;
         
         switch ([x integerValue]) {
             case LSHeaderRefresh_HasMoreData: {
@@ -138,6 +139,7 @@
     if (!_mainTableView) {
         
         _mainTableView = [[UITableView alloc] init];
+        _mainTableView.hidden = YES;
         _mainTableView.delegate = self;
         _mainTableView.dataSource = self;
         _mainTableView.backgroundColor = GX_BGCOLOR;

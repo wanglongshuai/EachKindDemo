@@ -1,20 +1,28 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5CF1B8D9C5E08D5A303112B5236A601C6A070B56",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
     "eb5ce7c6-2829-4b61-b089-381d6be2df50++5822" : {
 
     }
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "eb5ce7c6-2829-4b61-b089-381d6be2df50++5822" : 0
+    "eb5ce7c6-2829-4b61-b089-381d6be2df50++5822" : 0,
+    "5CF1B8D9C5E08D5A303112B5236A601C6A070B56" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0814401F-83ED-45D2-A9F4-42373AEBDC62",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "eb5ce7c6-2829-4b61-b089-381d6be2df50++5822" : "YiDing\/"
+    "eb5ce7c6-2829-4b61-b089-381d6be2df50++5822" : "YiDing\/",
+    "5CF1B8D9C5E08D5A303112B5236A601C6A070B56" : "EachKindDemo\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "YiDing",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "YiDing.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wanglongshuai\/EachKindDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5CF1B8D9C5E08D5A303112B5236A601C6A070B56"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/101.200.176.110",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",

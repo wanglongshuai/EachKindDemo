@@ -56,13 +56,13 @@
     }];
     
     
-    [[[self.refreshDataCommand.executing skip:1] take:1] subscribeNext:^(id x) {
-        
-        if ([x isEqualToNumber:@(YES)]) {
-            
-            ShowMaskStatus(@"正在加载");
-        }
-    }];
+//    [[[self.refreshDataCommand.executing skip:1] take:1] subscribeNext:^(id x) {
+//        
+//        if ([x isEqualToNumber:@(YES)]) {
+//            
+//            ShowMaskStatus(@"正在加载");
+//        }
+//    }];
     
     [self.nextPageCommand.executionSignals.switchToLatest subscribeNext:^(NSDictionary *dict) {
         

@@ -98,7 +98,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
     LSHomePageCell *cell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithUTF8String:object_getClassName([LSHomePageCell class])] forIndexPath:indexPath];
     
     if (self.viewModel.dataArray.count > indexPath.row) {
@@ -113,12 +112,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return 100;
+    return 80;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self.viewModel.cellClickSubject sendNext:self.viewModel.dataArray[indexPath.row]];
 }
 
 @end

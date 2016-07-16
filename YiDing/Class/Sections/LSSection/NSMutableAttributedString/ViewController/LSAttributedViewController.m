@@ -1,25 +1,23 @@
 //
-//  LSHomePageViewController.m
+//  LSAttributedViewController.m
 //  YiDing
 //
-//  Created by 王隆帅 on 16/7/13.
+//  Created by 王隆帅 on 16/7/14.
 //  Copyright © 2016年 王隆帅. All rights reserved.
 //
 
-#import "LSHomePageViewController.h"
-#import "LSHomePageMainView.h"
-#import "LSHomePageViewModel.h"
-#import "LSHomePageCellViewModel.h"
+#import "LSAttributedViewController.h"
+#import "LSAttributedViewModel.h"
+#import "LSAttributeMainView.h"
 
-@interface LSHomePageViewController ()
+@interface LSAttributedViewController ()
 
-@property (nonatomic, strong) LSHomePageViewModel *viewModel;
+@property (nonatomic, strong) LSAttributedViewModel *viewModel;
 
-@property (nonatomic, strong) LSHomePageMainView *mainView;
-
+@property (nonatomic, strong) LSAttributeMainView *mainView;
 @end
 
-@implementation LSHomePageViewController
+@implementation LSAttributedViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -52,40 +50,35 @@
 
 - (void)yd_bindViewModel {
     
-    @weakify(self);
-    [[self.viewModel.cellClickSubject takeUntil:self.rac_willDeallocSignal] subscribeNext:^(LSHomePageCellViewModel *cellViewModel) {
-        
-        @strongify(self);
-        YDViewController *detailViewController = [[NSClassFromString(cellViewModel.viewController) alloc] init];
-        [self.navigationController pushViewController:detailViewController animated:YES];
-    }];
 }
 
 - (void)yd_layoutNavigation {
     
-    self.title = @"主页";
+    self.title = @"富文本";
+    [self ls_setBackBtn];
 }
 
 #pragma mark - layzLoad
-- (LSHomePageMainView *)mainView {
+- (LSAttributeMainView *)mainView {
     
     if (!_mainView) {
         
-        _mainView = [[LSHomePageMainView alloc] initWithViewModel:self.viewModel];
+        _mainView = [[LSAttributeMainView alloc] initWithViewModel:self.viewModel];
     }
     
     return _mainView;
 }
 
-- (LSHomePageViewModel *)viewModel {
+- (LSAttributedViewModel *)viewModel {
     
     if (!_viewModel) {
         
-        _viewModel = [[LSHomePageViewModel alloc] init];
+        _viewModel = [[LSAttributedViewModel alloc] init];
     }
     
     return _viewModel;
 }
+
 
 /*
 #pragma mark - Navigation

@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong, readonly) NSArray *dataArray;
 
+@property (nonatomic, strong) RACSubject *cellClickSubject;
+
 @end

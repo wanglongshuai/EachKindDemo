@@ -57,7 +57,7 @@
     
     [self yd_removeNavgationBarLine];
     
-    [self layoutNavigationBar:ImageNamed(@"navigationBarBG@2x.png") titleColor:black_color titleFont:YC_YAHEI_FONT(18) leftBarButtonItem:nil rightBarButtonItem:nil];
+    [self layoutNavigationBar:ImageNamed(@"navigationBarBG") titleColor:white_color titleFont:[UIFont boldSystemFontOfSize:18] leftBarButtonItem:nil rightBarButtonItem:nil];
     
     if ([self respondsToSelector:@selector(setAutomaticallyAdjustsScrollViewInsets:)]) {
         [self setAutomaticallyAdjustsScrollViewInsets:NO];

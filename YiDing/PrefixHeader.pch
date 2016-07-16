@@ -25,6 +25,8 @@
 #import "APIMacro.h"
 #import "NotificationMacro.h"
 
+#import "UIViewController+LSCore.h"
+
 #import <Reachability/Reachability.h>
 #import <JSONKit/JSONKit.h>
 #import <SDWebImage/UIImageView+WebCache.h>
