@@ -3,34 +3,40 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>url</key>
+		<string>http://www.jianshu.com/p/3beb21d5def2</string>
 		<key>viewController</key>
 		<string>LSCircleListViewController</string>
 		<key>img</key>
 		<string>http://7xoqko.com1.z0.glb.clouddn.com/MVVM.jpg</string>
 		<key>content</key>
-		<string>666666</string>
+		<string>MVVM+RAC详解（简书）</string>
 		<key>title</key>
 		<string>MVVM+RAC列表实现</string>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string></string>
 		<key>viewController</key>
 		<string>LSGuideClickViewController</string>
 		<key>img</key>
-		<string>http://img4.imgtn.bdimg.com/it/u=924724924,3338617885&amp;fm=21&amp;gp=0.jpg</string>
+		<string>http://img1.3lian.com/2015/w7/98/d/22.jpg</string>
 		<key>content</key>
 		<string>封装的引导点击动画</string>
 		<key>title</key>
 		<string>引导点击动画</string>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string></string>
 		<key>viewController</key>
 		<string>LSAttributedViewController</string>
 		<key>img</key>
 		<string>http://www.aiimg.com/uploads/userup/0904/10095044B06.jpg</string>
 		<key>content</key>
-		<string>富文本封装及整理</string>
+		<string>富文本封装及相关讲解（简书）</string>
 		<key>title</key>
-		<string>富文本相关常用方法封装</string>
+		<string>富文本封装示例</string>
 	</dict>
 </array>
 </plist>

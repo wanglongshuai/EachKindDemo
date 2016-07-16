@@ -26,6 +26,7 @@
         cellViewModel.content = dict[@"content"];
         cellViewModel.img = dict[@"img"];
         cellViewModel.viewController = dict[@"viewController"];
+        cellViewModel.url = dict[@"url"];
         
         return cellViewModel;
     }] array];

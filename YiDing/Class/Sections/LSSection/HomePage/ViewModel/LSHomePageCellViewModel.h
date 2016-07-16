@@ -18,4 +18,6 @@
 
 @property (nonatomic, copy) NSString *viewController;
 
+@property (nonatomic, copy) NSString *url;
+
 @end

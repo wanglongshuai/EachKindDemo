@@ -15,6 +15,8 @@
 
 @property (nonatomic, strong) UILabel *contentLabel;
 
+@property (nonatomic, strong) UIButton *contentBtn;
+
 @property (nonatomic, strong) UIImageView *bottomLineImageView;
 
 @end
@@ -37,6 +39,7 @@
     [self.contentView addSubview:self.mainImageView];
     [self.contentView addSubview:self.titleLabel];
     [self.contentView addSubview:self.contentLabel];
+    [self.contentView addSubview:self.contentBtn];
     [self.contentView addSubview:self.bottomLineImageView];
     
     [self setNeedsUpdateConstraints];
@@ -69,9 +72,15 @@
     
     [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.left.right.equalTo(weakSelf.titleLabel);
+        make.left.equalTo(weakSelf.titleLabel);
+        make.right.lessThanOrEqualTo (weakSelf.titleLabel);
         make.top.equalTo(weakSelf.titleLabel.mas_bottom).offset(7.5);
         make.height.equalTo(20);
+    }];
+    
+    [self.contentBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.edges.equalTo(weakSelf.contentLabel);
     }];
     
     [self.bottomLineImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -94,7 +103,22 @@
     
     _viewModel = viewModel;
     self.titleLabel.text = viewModel.title;
-    self.contentLabel.text = viewModel.content;
+    
+    if (viewModel.url.length > 0) {
+       
+        self.contentLabel.attributedText = [LSCoreToolCenter ls_addLinkWithTotalString:viewModel.content SubStringArray:@[viewModel.content]];
+        self.contentBtn.hidden = NO;
+    } else {
+    
+        self.contentLabel.text = viewModel.content;
+        self.contentBtn.hidden = YES;
+    }
+    
+    [[[self.contentBtn rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:self.rac_prepareForReuseSignal]subscribeNext:^(id x) {
+        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:viewModel.url]];
+    }];
+   
     [self.mainImageView sd_setImageWithURL:URL(viewModel.img) placeholderImage:[UIImage imageNamed:@"defaultImage"]];
 }
 
@@ -106,6 +130,7 @@
         _mainImageView = [[UIImageView alloc] init];
         _mainImageView.layer.masksToBounds = YES;
         _mainImageView.layer.cornerRadius = 5.0;
+        _mainImageView.userInteractionEnabled = YES;
     }
     
     return _mainImageView;
@@ -130,9 +155,20 @@
         _contentLabel = [[UILabel alloc] init];
         _contentLabel.textColor = RGBCOLOR(113, 112, 113);
         _contentLabel.font = [UIFont systemFontOfSize:13];
+        [_contentLabel sizeToFit];
     }
     
     return _contentLabel;
+}
+
+- (UIButton *)contentBtn {
+
+    if (!_contentBtn) {
+        
+        _contentBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    }
+    
+    return _contentBtn;
 }
 
 - (UIImageView *)bottomLineImageView {

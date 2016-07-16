@@ -21,6 +21,8 @@
 
 @property (nonatomic, strong) UILabel *changeFontColorLabel;
 
+@property (nonatomic, strong) UILabel *changeLineAndSpaceLabel;
+
 @end
 @implementation LSAttributeMainView
 
@@ -44,6 +46,7 @@
     [self addSubview:self.changeSpaceLabel];
     [self addSubview:self.changeLineSpaceLabel];
     [self addSubview:self.changeFontColorLabel];
+    [self addSubview:self.changeLineAndSpaceLabel];
     
     [self setNeedsUpdateConstraints];
     [self updateConstraintsIfNeeded];
@@ -63,21 +66,27 @@
     [self.changeSpaceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.left.right.equalTo(weakSelf.changeColorLabel);
-        make.top.equalTo(weakSelf.changeColorLabel.mas_bottom).offset(10);
+        make.top.equalTo(weakSelf.changeColorLabel.mas_bottom).offset(25);
         make.height.equalTo(20);
     }];
     
     [self.changeLineSpaceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.left.right.equalTo(weakSelf.changeSpaceLabel);
-        make.top.equalTo(weakSelf.changeSpaceLabel.mas_bottom).offset(10);
+        make.top.equalTo(weakSelf.changeSpaceLabel.mas_bottom).offset(25);
     }];
     
     [self.changeFontColorLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(weakSelf.changeLineSpaceLabel.mas_bottom).offset(10);
+        make.top.equalTo(weakSelf.changeLineSpaceLabel.mas_bottom).offset(25);
         make.left.right.equalTo(weakSelf.changeLineSpaceLabel);
         make.height.equalTo(20);
+    }];
+    
+    [self.changeLineAndSpaceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.equalTo(weakSelf.changeFontColorLabel.mas_bottom).offset(25);
+        make.left.right.equalTo(weakSelf.changeFontColorLabel);
     }];
     
     [super updateConstraints];
@@ -92,6 +101,9 @@
     RAC(self.changeLineSpaceLabel, attributedText) = RACObserve(self, viewModel.changeLineSpaceString);
     
     RAC(self.changeFontColorLabel, attributedText) = RACObserve(self, viewModel.changeFontColorString);
+    
+    RAC(self.changeLineAndSpaceLabel, attributedText) = RACObserve(self, viewModel.changeLineAndSpaceColorString);
+
 }
 
 #pragma mark - lazyLoad
@@ -154,6 +166,20 @@
     }
     
     return _changeFontColorLabel;
+}
+
+- (UILabel *)changeLineAndSpaceLabel {
+
+    if (!_changeLineAndSpaceLabel) {
+        
+        _changeLineAndSpaceLabel = [[UILabel alloc] init];
+        _changeLineAndSpaceLabel.textColor = UIColorFromRGB(0x303030);
+        _changeLineAndSpaceLabel.font = [UIFont systemFontOfSize:16];
+        _changeLineAndSpaceLabel.numberOfLines = 0;
+        [_changeLineAndSpaceLabel sizeToFit];
+    }
+    
+    return _changeLineAndSpaceLabel;
 }
 
 @end

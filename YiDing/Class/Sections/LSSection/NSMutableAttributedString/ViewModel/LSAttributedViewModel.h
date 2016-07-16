@@ -17,5 +17,7 @@
 @property (nonatomic, strong, readonly) NSMutableAttributedString *changeLineSpaceString;
 @property (nonatomic, strong, readonly) NSMutableAttributedString *changeFontColorString;
 
+@property (nonatomic, strong, readonly) NSMutableAttributedString *changeLineAndSpaceColorString;
+
 
 @end
