@@ -221,4 +221,172 @@ void DismissHud(void){
     return attributedStr;
 }
 
+#pragma mark - 选择相册相关API
+
+/**
+ *  获取相册的图片
+ *
+ *  @param result 获取到的图片
+ *  @param error  失败信息
+ */
++ (void)getSavedPhotoList:(void (^)(NSArray *))result error:(void (^)(NSError *))error
+{
+    NSMutableArray *savedPhotoList = [NSMutableArray array];
+    
+    if (IOS_VERSION >= __IPHONE_9_0) {
+        
+        NSMutableArray* assetarray = [NSMutableArray array];
+        PHFetchResult* collections = [PHAssetCollection fetchMomentsWithOptions:nil];
+        
+        for (PHAssetCollection* collection in collections) {
+            PHFetchResult* assets = [PHAsset fetchAssetsInAssetCollection:collection options:nil];
+            for (PHAsset* asset in assets) {
+                if (asset.mediaType ==  PHAssetMediaTypeImage) {
+                    [assetarray addObject:asset];
+                }
+            }
+        }
+        
+        [assetarray sortUsingComparator:^NSComparisonResult(PHAsset* obj1, PHAsset* obj2) {
+            return [obj2.creationDate compare:obj1.creationDate];
+        }];
+        
+        if (result) {
+            result(assetarray);
+        }
+        return;
+        
+    }
+    
+    ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc] init];
+    
+    void (^assetGroupEnumerator)(ALAssetsGroup *, BOOL *) = ^(ALAssetsGroup *group, BOOL *stop) {
+        
+        
+        if ([[group valueForProperty:@"ALAssetsGroupPropertyType"] intValue] == ALAssetsGroupSavedPhotos) {
+            
+            [group setAssetsFilter: [ALAssetsFilter allPhotos]];
+            
+            [group enumerateAssetsUsingBlock:^(ALAsset *alPhoto, NSUInteger index, BOOL *stop) {
+                @autoreleasepool {
+                    
+                    if(alPhoto == nil) {
+                        
+                        NSArray * tempArray = [savedPhotoList copy];
+                        [savedPhotoList removeAllObjects];
+                        [savedPhotoList addObjectsFromArray: [[tempArray reverseObjectEnumerator] allObjects]];
+                        
+                        
+                        result([savedPhotoList mutableCopy]);
+                        
+                        return;
+                    }
+                    
+                    [savedPhotoList addObject:alPhoto];
+                }
+            }];
+        }
+    };
+    
+    void (^assetGroupEnumberatorFailure)(NSError *) = ^(NSError *err) {
+        
+        NSLog(@"Asset read Error : %@", [err description]);
+    };
+    
+    [assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:assetGroupEnumerator failureBlock:assetGroupEnumberatorFailure];
+}
+
+/**
+ *  获取asset中的image
+ *
+ *  @param asset       PSAsset
+ *  @param size        尺寸
+ *  @param completion  完成block
+ *  @param synchronous 是否异步
+ */
++ (void)generaImaeWithAsset:(PHAsset *)asset size:(CGSize)size completion:(void (^)(UIImage *))completion synchronous:(BOOL)synchronous {
+    
+    PHImageRequestOptions* options = [[PHImageRequestOptions alloc]init];
+    options.synchronous = synchronous;
+    [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:size contentMode:PHImageContentModeAspectFit options:options resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+        if (completion) {
+            completion(result);
+        }
+    }];
+    
+}
+
+/**
+ *  获取Asset中的size
+ *
+ *  @param asset Asset
+ *
+ *  @return 得到的size
+ */
++ (CGSize)getSizeFromAsset:(id)asset {
+    
+    CGSize size;
+    
+    if ([asset isKindOfClass:[PHAsset class]]) {
+        
+        PHAsset* pa = (PHAsset*)asset;
+        size = CGSizeMake(pa.pixelWidth, pa.pixelHeight);
+    } else {
+        
+        ALAssetRepresentation * representation = [asset defaultRepresentation];
+        size = [representation dimensions];
+    }
+    
+    return size;
+}
+
+/**
+ *  从asset中截取一定尺寸的图片
+ *
+ *  @param asset asset
+ *  @param size  需要的尺寸
+ *
+ *  @return 得到的image
+ */
++ (UIImage *)getThumImageFromAsset:(id)asset withSize:(CGSize)size {
+    
+    __block UIImage *image;
+    
+    if ([asset isKindOfClass:[PHAsset class]]) {
+        
+        PHAsset* pa = (PHAsset*)asset;
+        
+        [LSCoreToolCenter generaImaeWithAsset:pa size:size completion:^(UIImage *result) {
+            
+            image = result;
+        } synchronous:YES];
+        
+    } else {
+        
+        if ([[[UIDevice alloc] systemVersion] floatValue] >= 9.0) {
+            
+            image = [UIImage imageWithCGImage:[asset aspectRatioThumbnail]];;
+        } else {
+            
+            image = [UIImage imageWithCGImage:[asset thumbnail]];;
+        }
+    }
+    
+    return image;
+    
+}
+
+#pragma mark - animation
+
+void JumpAnimation (UIView *view ,NSTimeInterval duration,float height){
+    
+    CAKeyframeAnimation * animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.translation.y"];
+    CGFloat currentTx = view.transform.ty;
+    animation.duration = duration;
+    animation.values = @[@(currentTx), @(currentTx + height),@(currentTx), @(currentTx +height/3.0),@(currentTx), @(currentTx + height/5.0),@(currentTx),];
+    animation.keyTimes = @[ @(0), @(0.35), @(0.65), @(0.80),@(0.885), @(0.95), @(1.0) ];
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    [view.layer addAnimation:animation forKey:@"kViewShakerAnimationKey"];
+}
+
 @end

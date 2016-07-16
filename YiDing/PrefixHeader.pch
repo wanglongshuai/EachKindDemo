@@ -24,6 +24,8 @@
 #import "VendorMarco.h"
 #import "APIMacro.h"
 #import "NotificationMacro.h"
+#import "ToolView.h"
+#import "UIView+LSCore.h"
 
 #import "UIViewController+LSCore.h"
 

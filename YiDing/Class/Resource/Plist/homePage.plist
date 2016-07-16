@@ -18,13 +18,13 @@
 		<key>url</key>
 		<string></string>
 		<key>viewController</key>
-		<string>LSGuideClickViewController</string>
+		<string>LSImagePickerViewController</string>
 		<key>img</key>
 		<string>http://img1.3lian.com/2015/w7/98/d/22.jpg</string>
 		<key>content</key>
-		<string>封装的引导点击动画</string>
+		<string>聊天图片选择器的封装及CollectionView详解</string>
 		<key>title</key>
-		<string>引导点击动画</string>
+		<string>图片选择封装(CollectionView)</string>
 	</dict>
 	<dict>
 		<key>url</key>
@@ -34,9 +34,21 @@
 		<key>img</key>
 		<string>http://www.aiimg.com/uploads/userup/0904/10095044B06.jpg</string>
 		<key>content</key>
-		<string>富文本封装及相关讲解（简书）</string>
+		<string>富文本封装及NSAttributedString浅析（简书）</string>
 		<key>title</key>
 		<string>富文本封装示例</string>
+	</dict>
+	<dict>
+		<key>url</key>
+		<string></string>
+		<key>viewController</key>
+		<string>LSGuideClickViewController</string>
+		<key>img</key>
+		<string>http://imgstore.cdn.sogou.com/app/a/100540002/714860.jpg</string>
+		<key>content</key>
+		<string>引导动画及Animation浅谈</string>
+		<key>title</key>
+		<string>引导动画示例</string>
 	</dict>
 </array>
 </plist>

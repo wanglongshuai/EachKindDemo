@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import <Photos/Photos.h>
 
 @interface LSCoreToolCenter : NSObject
+
+#pragma mark - 提示框
 
 extern void ShowSuccessStatus(NSString *statues);
 extern void ShowErrorStatus(NSString *statues);
@@ -81,4 +84,47 @@ extern void DismissHud(void);
  *  @return 生成的富文本
  */
 + (NSMutableAttributedString *)ls_addLinkWithTotalString:(NSString *)totalString SubStringArray:(NSArray *)subArray;
+
+#pragma mark - 选择相册相关API
+/**
+ *  获取相册的图片
+ *
+ *  @param result 获取到的图片
+ *  @param error  失败信息
+ */
++ (void)getSavedPhotoList:(void (^)(NSArray *))result error:(void (^)(NSError *))error;
+
+/**
+ *  获取asset中的image
+ *
+ *  @param asset       PSAsset
+ *  @param size        尺寸
+ *  @param completion  完成block
+ *  @param synchronous 是否异步
+ */
++ (void)generaImaeWithAsset:(PHAsset *)asset size:(CGSize)size completion:(void (^)(UIImage *))completion synchronous:(BOOL)synchronous;
+
+/**
+ *  获取Asset中的size
+ *
+ *  @param asset Asset
+ *
+ *  @return 得到的size
+ */
++ (CGSize)getSizeFromAsset:(id)asset;
+
+/**
+ *  从asset中截取一定尺寸的图片
+ *
+ *  @param asset asset
+ *  @param size  需要的尺寸
+ *
+ *  @return 得到的image
+ */
++ (UIImage *)getThumImageFromAsset:(id)asset withSize:(CGSize)size;
+
+#pragma mark - 动画
+extern void JumpAnimation (UIView *view ,NSTimeInterval duration,float height);
+
+
 @end

@@ -18,12 +18,27 @@
 		DC633EF61C9FF03900DF00F2 /* YDTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC633EF51C9FF03900DF00F2 /* YDTableViewHeaderFooterView.m */; };
 		DC633EF91C9FF05B00DF00F2 /* YDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC633EF81C9FF05B00DF00F2 /* YDNavigationController.m */; };
 		DC633EFC1C9FF08800DF00F2 /* YDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC633EFB1C9FF08800DF00F2 /* YDCollectionViewCell.m */; };
+		DC662B391D3A15EC00F4A483 /* LSImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC662B381D3A15EC00F4A483 /* LSImagePickerViewController.m */; };
+		DC662B531D3A164E00F4A483 /* QDChatImagePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC662B4A1D3A164E00F4A483 /* QDChatImagePickerCell.m */; };
+		DC662B541D3A164E00F4A483 /* QDChatImagePickerFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DC662B4C1D3A164E00F4A483 /* QDChatImagePickerFlowLayout.m */; };
+		DC662B551D3A164E00F4A483 /* QDChatImagePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC662B4E1D3A164E00F4A483 /* QDChatImagePickerView.m */; };
+		DC662B561D3A164E00F4A483 /* QDChatSelectedCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC662B501D3A164E00F4A483 /* QDChatSelectedCollectionView.m */; };
+		DC662B571D3A164E00F4A483 /* QDChatSelectedImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC662B521D3A164E00F4A483 /* QDChatSelectedImageCell.m */; };
+		DC662B5E1D3A167100F4A483 /* QDChatImagePickerCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC662B591D3A167100F4A483 /* QDChatImagePickerCellViewModel.m */; };
+		DC662B5F1D3A167100F4A483 /* QDChatImagePickerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC662B5B1D3A167100F4A483 /* QDChatImagePickerViewModel.m */; };
+		DC662B601D3A167100F4A483 /* QDChatSelectedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC662B5D1D3A167100F4A483 /* QDChatSelectedViewModel.m */; };
+		DC662B621D3A195C00F4A483 /* ImagePicker.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC662B611D3A195C00F4A483 /* ImagePicker.xcassets */; };
 		DC7102861D378BCF0028E7DA /* LSAttributedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7102851D378BCF0028E7DA /* LSAttributedViewController.m */; };
 		DC71028B1D378D800028E7DA /* LSAttributedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC71028A1D378D800028E7DA /* LSAttributedViewModel.m */; };
 		DC71028E1D378DC00028E7DA /* LSAttributeMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC71028D1D378DC00028E7DA /* LSAttributeMainView.m */; };
 		DCABBFEC1CA02A7E004D1AD9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCABBFEB1CA02A7E004D1AD9 /* AppDelegate.m */; };
 		DCABBFEF1CA02AA0004D1AD9 /* YDStartAPP.m in Sources */ = {isa = PBXBuildFile; fileRef = DCABBFEE1CA02AA0004D1AD9 /* YDStartAPP.m */; };
 		DCABBFF21CA02AC0004D1AD9 /* YDThirdPartService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCABBFF11CA02AC0004D1AD9 /* YDThirdPartService.m */; };
+		DCB83BED1D3A222100D2DE3B /* QDJumpingAnimateView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB83BEA1D3A222100D2DE3B /* QDJumpingAnimateView.m */; };
+		DCB83BEE1D3A222100D2DE3B /* QDReadDestroyYinDaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB83BEC1D3A222100D2DE3B /* QDReadDestroyYinDaoView.m */; };
+		DCB83BF91D3A226300D2DE3B /* QDJumpingAnimateViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB83BF61D3A226300D2DE3B /* QDJumpingAnimateViewModel.m */; };
+		DCB83BFA1D3A226300D2DE3B /* QDReadDestroyYinDaoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB83BF81D3A226300D2DE3B /* QDReadDestroyYinDaoViewModel.m */; };
+		DCB83BFD1D3A23A000D2DE3B /* UIView+LSCore.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB83BFC1D3A23A000D2DE3B /* UIView+LSCore.m */; };
 		DCCE73EC1D372D44009AC0EB /* homePage.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCCE73EB1D372D44009AC0EB /* homePage.plist */; };
 		DCCE73F21D37385B009AC0EB /* UIViewController+LSCore.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCE73F11D37385B009AC0EB /* UIViewController+LSCore.m */; };
 		DCCE73FA1D373F6C009AC0EB /* LSGuideClickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCE73F91D373F6C009AC0EB /* LSGuideClickViewController.m */; };
@@ -85,6 +100,25 @@
 		DC633F001C9FF19700DF00F2 /* YDTableVIewCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTableVIewCellProtocol.h; sourceTree = "<group>"; };
 		DC633F011C9FF1ED00DF00F2 /* YDTableViewHeaderFooterViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTableViewHeaderFooterViewProtocol.h; sourceTree = "<group>"; };
 		DC633F031C9FF23A00DF00F2 /* YDCollerctionViewCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDCollerctionViewCellProtocol.h; sourceTree = "<group>"; };
+		DC662B371D3A15EC00F4A483 /* LSImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSImagePickerViewController.h; sourceTree = "<group>"; };
+		DC662B381D3A15EC00F4A483 /* LSImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSImagePickerViewController.m; sourceTree = "<group>"; };
+		DC662B491D3A164E00F4A483 /* QDChatImagePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDChatImagePickerCell.h; sourceTree = "<group>"; };
+		DC662B4A1D3A164E00F4A483 /* QDChatImagePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDChatImagePickerCell.m; sourceTree = "<group>"; };
+		DC662B4B1D3A164E00F4A483 /* QDChatImagePickerFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDChatImagePickerFlowLayout.h; sourceTree = "<group>"; };
+		DC662B4C1D3A164E00F4A483 /* QDChatImagePickerFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDChatImagePickerFlowLayout.m; sourceTree = "<group>"; };
+		DC662B4D1D3A164E00F4A483 /* QDChatImagePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDChatImagePickerView.h; sourceTree = "<group>"; };
+		DC662B4E1D3A164E00F4A483 /* QDChatImagePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDChatImagePickerView.m; sourceTree = "<group>"; };
+		DC662B4F1D3A164E00F4A483 /* QDChatSelectedCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDChatSelectedCollectionView.h; sourceTree = "<group>"; };
+		DC662B501D3A164E00F4A483 /* QDChatSelectedCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDChatSelectedCollectionView.m; sourceTree = "<group>"; };
+		DC662B511D3A164E00F4A483 /* QDChatSelectedImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDChatSelectedImageCell.h; sourceTree = "<group>"; };
+		DC662B521D3A164E00F4A483 /* QDChatSelectedImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDChatSelectedImageCell.m; sourceTree = "<group>"; };
+		DC662B581D3A167100F4A483 /* QDChatImagePickerCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDChatImagePickerCellViewModel.h; sourceTree = "<group>"; };
+		DC662B591D3A167100F4A483 /* QDChatImagePickerCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDChatImagePickerCellViewModel.m; sourceTree = "<group>"; };
+		DC662B5A1D3A167100F4A483 /* QDChatImagePickerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDChatImagePickerViewModel.h; sourceTree = "<group>"; };
+		DC662B5B1D3A167100F4A483 /* QDChatImagePickerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDChatImagePickerViewModel.m; sourceTree = "<group>"; };
+		DC662B5C1D3A167100F4A483 /* QDChatSelectedViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDChatSelectedViewModel.h; sourceTree = "<group>"; };
+		DC662B5D1D3A167100F4A483 /* QDChatSelectedViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDChatSelectedViewModel.m; sourceTree = "<group>"; };
+		DC662B611D3A195C00F4A483 /* ImagePicker.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImagePicker.xcassets; sourceTree = "<group>"; };
 		DC7102841D378BCF0028E7DA /* LSAttributedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAttributedViewController.h; sourceTree = "<group>"; };
 		DC7102851D378BCF0028E7DA /* LSAttributedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAttributedViewController.m; sourceTree = "<group>"; };
 		DC7102891D378D800028E7DA /* LSAttributedViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAttributedViewModel.h; sourceTree = "<group>"; };
@@ -97,6 +131,16 @@
 		DCABBFEE1CA02AA0004D1AD9 /* YDStartAPP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDStartAPP.m; sourceTree = "<group>"; };
 		DCABBFF01CA02AC0004D1AD9 /* YDThirdPartService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDThirdPartService.h; sourceTree = "<group>"; };
 		DCABBFF11CA02AC0004D1AD9 /* YDThirdPartService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDThirdPartService.m; sourceTree = "<group>"; };
+		DCB83BE91D3A222100D2DE3B /* QDJumpingAnimateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDJumpingAnimateView.h; sourceTree = "<group>"; };
+		DCB83BEA1D3A222100D2DE3B /* QDJumpingAnimateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDJumpingAnimateView.m; sourceTree = "<group>"; };
+		DCB83BEB1D3A222100D2DE3B /* QDReadDestroyYinDaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDReadDestroyYinDaoView.h; sourceTree = "<group>"; };
+		DCB83BEC1D3A222100D2DE3B /* QDReadDestroyYinDaoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDReadDestroyYinDaoView.m; sourceTree = "<group>"; };
+		DCB83BF51D3A226300D2DE3B /* QDJumpingAnimateViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDJumpingAnimateViewModel.h; sourceTree = "<group>"; };
+		DCB83BF61D3A226300D2DE3B /* QDJumpingAnimateViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDJumpingAnimateViewModel.m; sourceTree = "<group>"; };
+		DCB83BF71D3A226300D2DE3B /* QDReadDestroyYinDaoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDReadDestroyYinDaoViewModel.h; sourceTree = "<group>"; };
+		DCB83BF81D3A226300D2DE3B /* QDReadDestroyYinDaoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDReadDestroyYinDaoViewModel.m; sourceTree = "<group>"; };
+		DCB83BFB1D3A23A000D2DE3B /* UIView+LSCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LSCore.h"; sourceTree = "<group>"; };
+		DCB83BFC1D3A23A000D2DE3B /* UIView+LSCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LSCore.m"; sourceTree = "<group>"; };
 		DCCE73EB1D372D44009AC0EB /* homePage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = homePage.plist; sourceTree = "<group>"; };
 		DCCE73F01D37385B009AC0EB /* UIViewController+LSCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LSCore.h"; sourceTree = "<group>"; };
 		DCCE73F11D37385B009AC0EB /* UIViewController+LSCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LSCore.m"; sourceTree = "<group>"; };
@@ -265,6 +309,8 @@
 			children = (
 				DCCE73F01D37385B009AC0EB /* UIViewController+LSCore.h */,
 				DCCE73F11D37385B009AC0EB /* UIViewController+LSCore.m */,
+				DCB83BFB1D3A23A000D2DE3B /* UIView+LSCore.h */,
+				DCB83BFC1D3A23A000D2DE3B /* UIView+LSCore.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -333,6 +379,7 @@
 		DC633E201C9FEDAA00DF00F2 /* LSSection */ = {
 			isa = PBXGroup;
 			children = (
+				DC662B321D3A103800F4A483 /* ImagePicker */,
 				DC7102821D378B700028E7DA /* NSMutableAttributedString */,
 				DCCE73F31D373F39009AC0EB /* Animation */,
 				DCD039801D36624B00C12AD3 /* HomePage */,
@@ -346,6 +393,64 @@
 			children = (
 			);
 			path = Vendors;
+			sourceTree = "<group>";
+		};
+		DC662B321D3A103800F4A483 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				DC662B331D3A103800F4A483 /* Model */,
+				DC662B341D3A103800F4A483 /* View */,
+				DC662B351D3A103800F4A483 /* ViewController */,
+				DC662B361D3A103800F4A483 /* ViewModel */,
+				DC662B611D3A195C00F4A483 /* ImagePicker.xcassets */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		DC662B331D3A103800F4A483 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DC662B341D3A103800F4A483 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC662B491D3A164E00F4A483 /* QDChatImagePickerCell.h */,
+				DC662B4A1D3A164E00F4A483 /* QDChatImagePickerCell.m */,
+				DC662B4B1D3A164E00F4A483 /* QDChatImagePickerFlowLayout.h */,
+				DC662B4C1D3A164E00F4A483 /* QDChatImagePickerFlowLayout.m */,
+				DC662B4D1D3A164E00F4A483 /* QDChatImagePickerView.h */,
+				DC662B4E1D3A164E00F4A483 /* QDChatImagePickerView.m */,
+				DC662B4F1D3A164E00F4A483 /* QDChatSelectedCollectionView.h */,
+				DC662B501D3A164E00F4A483 /* QDChatSelectedCollectionView.m */,
+				DC662B511D3A164E00F4A483 /* QDChatSelectedImageCell.h */,
+				DC662B521D3A164E00F4A483 /* QDChatSelectedImageCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DC662B351D3A103800F4A483 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DC662B371D3A15EC00F4A483 /* LSImagePickerViewController.h */,
+				DC662B381D3A15EC00F4A483 /* LSImagePickerViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DC662B361D3A103800F4A483 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC662B581D3A167100F4A483 /* QDChatImagePickerCellViewModel.h */,
+				DC662B591D3A167100F4A483 /* QDChatImagePickerCellViewModel.m */,
+				DC662B5A1D3A167100F4A483 /* QDChatImagePickerViewModel.h */,
+				DC662B5B1D3A167100F4A483 /* QDChatImagePickerViewModel.m */,
+				DC662B5C1D3A167100F4A483 /* QDChatSelectedViewModel.h */,
+				DC662B5D1D3A167100F4A483 /* QDChatSelectedViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DC7102821D378B700028E7DA /* NSMutableAttributedString */ = {
@@ -436,6 +541,10 @@
 		DCCE73F51D373F39009AC0EB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DCB83BE91D3A222100D2DE3B /* QDJumpingAnimateView.h */,
+				DCB83BEA1D3A222100D2DE3B /* QDJumpingAnimateView.m */,
+				DCB83BEB1D3A222100D2DE3B /* QDReadDestroyYinDaoView.h */,
+				DCB83BEC1D3A222100D2DE3B /* QDReadDestroyYinDaoView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -452,6 +561,10 @@
 		DCCE73F71D373F39009AC0EB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DCB83BF51D3A226300D2DE3B /* QDJumpingAnimateViewModel.h */,
+				DCB83BF61D3A226300D2DE3B /* QDJumpingAnimateViewModel.m */,
+				DCB83BF71D3A226300D2DE3B /* QDReadDestroyYinDaoViewModel.h */,
+				DCB83BF81D3A226300D2DE3B /* QDReadDestroyYinDaoViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -634,6 +747,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCCE73EC1D372D44009AC0EB /* homePage.plist in Resources */,
+				DC662B621D3A195C00F4A483 /* ImagePicker.xcassets in Resources */,
 				DCCE73FC1D373FA2009AC0EB /* Animation.xcassets in Resources */,
 				DCD501111CB74EC000BFC00C /* Assets.xcassets in Resources */,
 			);
@@ -694,17 +808,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC662B5F1D3A167100F4A483 /* QDChatImagePickerViewModel.m in Sources */,
 				DCF0B7451D36671C009AD1DF /* LSHomePageCell.m in Sources */,
+				DC662B551D3A164E00F4A483 /* QDChatImagePickerView.m in Sources */,
 				DCF0B7421D366567009AD1DF /* LSHomePageMainView.m in Sources */,
 				DCD501041CB7436000BFC00C /* LSCircleListHeaderView.m in Sources */,
 				DC71028E1D378DC00028E7DA /* LSAttributeMainView.m in Sources */,
 				DCF0B7361D366370009AD1DF /* LSHomePageViewController.m in Sources */,
 				DCF0B73F1D36640C009AD1DF /* LSHomePageViewModel.m in Sources */,
+				DCB83BED1D3A222100D2DE3B /* QDJumpingAnimateView.m in Sources */,
+				DCB83BF91D3A226300D2DE3B /* QDJumpingAnimateViewModel.m in Sources */,
+				DCB83BFA1D3A226300D2DE3B /* QDReadDestroyYinDaoViewModel.m in Sources */,
 				DCD5010B1CB7436000BFC00C /* LSCircleListSectionHeaderViewModel.m in Sources */,
 				DC633EED1C9FEFB700DF00F2 /* YDView.m in Sources */,
 				DC633EEA1C9FEF8C00DF00F2 /* YDViewController.m in Sources */,
 				DC633EF01C9FEFDE00DF00F2 /* YDViewModel.m in Sources */,
 				DCD5010C1CB7436000BFC00C /* LSCircleListViewModel.m in Sources */,
+				DCB83BEE1D3A222100D2DE3B /* QDReadDestroyYinDaoView.m in Sources */,
+				DC662B571D3A164E00F4A483 /* QDChatSelectedImageCell.m in Sources */,
 				DC633EF31C9FF01400DF00F2 /* YDTableViewCell.m in Sources */,
 				DCD501091CB7436000BFC00C /* LSCircleListCollectionCellViewModel.m in Sources */,
 				DCCE73F21D37385B009AC0EB /* UIViewController+LSCore.m in Sources */,
@@ -714,11 +835,17 @@
 				DCD5010F1CB749C300BFC00C /* LSCoreToolCenter.m in Sources */,
 				DC633EF61C9FF03900DF00F2 /* YDTableViewHeaderFooterView.m in Sources */,
 				DCD501061CB7436000BFC00C /* LSCircleListTableCell.m in Sources */,
+				DC662B541D3A164E00F4A483 /* QDChatImagePickerFlowLayout.m in Sources */,
+				DC662B601D3A167100F4A483 /* QDChatSelectedViewModel.m in Sources */,
 				DCD5010A1CB7436000BFC00C /* LSCircleListHeaderViewModel.m in Sources */,
 				DC633EF91C9FF05B00DF00F2 /* YDNavigationController.m in Sources */,
 				DC71028B1D378D800028E7DA /* LSAttributedViewModel.m in Sources */,
+				DC662B5E1D3A167100F4A483 /* QDChatImagePickerCellViewModel.m in Sources */,
 				DCD501051CB7436000BFC00C /* LSCircleListSectionHeaderView.m in Sources */,
+				DC662B531D3A164E00F4A483 /* QDChatImagePickerCell.m in Sources */,
 				DC633EA31C9FEDAA00DF00F2 /* CMRequest.m in Sources */,
+				DC662B561D3A164E00F4A483 /* QDChatSelectedCollectionView.m in Sources */,
+				DCB83BFD1D3A23A000D2DE3B /* UIView+LSCore.m in Sources */,
 				DC633EFC1C9FF08800DF00F2 /* YDCollectionViewCell.m in Sources */,
 				DCD501081CB7436000BFC00C /* LSCircleListViewController.m in Sources */,
 				DC7102861D378BCF0028E7DA /* LSAttributedViewController.m in Sources */,
@@ -727,6 +854,7 @@
 				DCF0B7481D366867009AD1DF /* LSHomePageCellViewModel.m in Sources */,
 				DC633D9F1C9FEBEA00DF00F2 /* main.m in Sources */,
 				DCABBFEF1CA02AA0004D1AD9 /* YDStartAPP.m in Sources */,
+				DC662B391D3A15EC00F4A483 /* LSImagePickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -823,6 +951,7 @@
 				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YiDing/PrefixHeader.pch";
 				INFOPLIST_FILE = YiDing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "---.YiDing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -837,6 +966,7 @@
 				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YiDing/PrefixHeader.pch";
 				INFOPLIST_FILE = YiDing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "---.YiDing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
