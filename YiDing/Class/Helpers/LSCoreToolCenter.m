@@ -90,11 +90,11 @@ void DismissHud(void){
 #pragma mark - 富文本操作
 
 /**
- *  单纯改变一句话中的某些字的颜色（一种颜色）
+ *  单纯改变一句话中的某些字的颜色
  *
  *  @param color    需要改变成的颜色
  *  @param totalStr 总的字符串
- *  @param subArray 需要改变颜色的文字数组(要是有相同的 只取第一个)
+ *  @param subArray 需要改变颜色的文字数组
  *
  *  @return 生成的富文本
  */
@@ -103,8 +103,14 @@ void DismissHud(void){
     NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString:totalStr];
     for (NSString *rangeStr in subArray) {
         
-        NSRange range = [totalStr rangeOfString:rangeStr options:NSBackwardsSearch];
-        [attributedStr addAttribute:NSForegroundColorAttributeName value:color range:range];
+        NSMutableArray *array = [self ls_getRangeWithTotalString:totalStr SubString:rangeStr];
+        
+        for (NSNumber *rangeNum in array) {
+            
+            NSRange range = [rangeNum rangeValue];
+            [attributedStr addAttribute:NSForegroundColorAttributeName value:color range:range];
+        }
+        
     }
     
     return attributedStr;
@@ -219,6 +225,64 @@ void DismissHud(void){
     }
     
     return attributedStr;
+}
+
+#pragma mark - 获取某个子字符串在某个总字符串中位置数组
+/**
+ *  获取某个字符串中子字符串的位置数组
+ *
+ *  @param totalString 总的字符串
+ *  @param subString   子字符串
+ *
+ *  @return 位置数组
+ */
++ (NSMutableArray *)ls_getRangeWithTotalString:(NSString *)totalString SubString:(NSString *)subString {
+    
+    NSMutableArray *arrayRanges = [NSMutableArray array];
+    
+    if (subString == nil && [subString isEqualToString:@""]) {
+        return nil;
+    }
+    
+    NSRange rang = [totalString rangeOfString:subString];
+    
+    if (rang.location != NSNotFound && rang.length != 0) {
+        
+        [arrayRanges addObject:[NSNumber valueWithRange:rang]];
+        
+        NSRange      rang1 = {0,0};
+        NSInteger location = 0;
+        NSInteger   length = 0;
+        
+        for (int i = 0;; i++) {
+            
+            if (0 == i) {
+                
+                location = rang.location + rang.length;
+                length = totalString.length - rang.location - rang.length;
+                rang1 = NSMakeRange(location, length);
+            } else {
+                
+                location = rang1.location + rang1.length;
+                length = totalString.length - rang1.location - rang1.length;
+                rang1 = NSMakeRange(location, length);
+            }
+            
+            rang1 = [totalString rangeOfString:subString options:NSCaseInsensitiveSearch range:rang1];
+            
+            if (rang1.location == NSNotFound && rang1.length == 0) {
+                
+                break;
+            } else {
+                
+                [arrayRanges addObject:[NSNumber valueWithRange:rang1]];
+            }
+        }
+        
+        return arrayRanges;
+    }
+    
+    return nil;
 }
 
 #pragma mark - 选择相册相关API

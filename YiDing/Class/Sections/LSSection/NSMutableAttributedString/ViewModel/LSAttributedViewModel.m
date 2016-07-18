@@ -27,7 +27,7 @@
 
     // *******单纯改变某几个字 颜色********
     
-    NSString *total1 = @"单纯改变颜色,不做其他设置";
+    NSString *total1 = @"单纯改变颜色,不做其他设置,单纯改变颜色";
     NSArray *subArray1 = @[@"单纯",@"其他"];
     
     self.changeColorString = [LSCoreToolCenter ls_changeCorlorWithColor:[UIColor redColor] TotalString:total1 SubStringArray:subArray1];

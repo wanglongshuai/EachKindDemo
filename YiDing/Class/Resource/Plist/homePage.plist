@@ -28,7 +28,7 @@
 	</dict>
 	<dict>
 		<key>url</key>
-		<string></string>
+		<string>http://www.jianshu.com/p/960e25d72750</string>
 		<key>viewController</key>
 		<string>LSAttributedViewController</string>
 		<key>img</key>
